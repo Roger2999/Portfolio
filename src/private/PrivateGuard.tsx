@@ -1,8 +1,8 @@
 import { Navigate, Outlet } from "react-router-dom"
-import { useAuthStore } from "../store";
+import { AuthStore } from "../store";
 
 export const PrivateGuard = () => {
-    const token = useAuthStore((state) => state.token);
+    const token = AuthStore((state) => state.token);
 
   return (
     <>

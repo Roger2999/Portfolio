@@ -9,6 +9,9 @@ export const Home = () => {
     <NavLink to={"/login"}>
       <button type="button" >Login</button>
     </NavLink>
+    <NavLink to={"/register"}>
+    <button type="button">Register</button>
+    </NavLink>
     </>
   )
 }

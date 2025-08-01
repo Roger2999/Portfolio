@@ -4,6 +4,7 @@ import { Home, Login, Projects, Skills } from "./public/Pages"
 import { PrivateGuard } from "./private/PrivateGuard"
 import { PrivateRoutes } from "./private/PrivateRoutes"
 import { PageNotFound } from "./components/PageNotFound/PageNotFound"
+import { Register } from "./public/Pages/Register/Register"
 
 export const PortfolioRoutes = () => {
   return (
@@ -16,6 +17,7 @@ export const PortfolioRoutes = () => {
             <Route path="/home" element={<Home/>}/>
             <Route path="/projects" element={<Projects/>}/>
             <Route path="/skills" element={<Skills/>}/>
+            <Route path="/register" element={<Register/>}/>
             <Route element ={<PrivateGuard/>}>
                 <Route path="/private/*" element={<PrivateRoutes/>}/>
             </Route>
