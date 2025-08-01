@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { schema, type LoginForm } from '../../../models/formModel';
 import { CustomInput } from '../../../components/CustomInput/CustomInput';
-import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../hooks/useAuth';
 import { AuthStore } from '../../../store';
 
@@ -14,18 +13,15 @@ export const Login = () => {
     resolver: zodResolver(schema),
     defaultValues: { email: '', password: '' },
   });
-  const navigate = useNavigate();
+ 
   const logout = AuthStore((state)=> state.logout)
   const isAutenticated = AuthStore((state)=>state.isAutenticated)
   const {mutation } = useAuth()
   const {mutate, isPending} = mutation
   const onSubmit = async (data: LoginForm) => {
-    try {
       mutate(data)
-      navigate('/private/dashboard');
-    } catch {
-      alert('Login fallido: usuario o contraseña incorrectos');
-    }
+      
+    
   };
 
   return (
