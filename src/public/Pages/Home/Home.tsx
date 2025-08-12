@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom"
+import { CardPresentation } from "../../../components"
 
 
 export const Home = () => {
   return (
     <>
-    
-    <div>Home</div>
+    <CardPresentation/>
     <NavLink to={"/login"}>
       <button type="button" >Login</button>
     </NavLink>

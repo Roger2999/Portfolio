@@ -18,6 +18,7 @@ export const Login = () => {
   const isAutenticated = AuthStore((state)=>state.isAutenticated)
   const {mutation } = useAuth()
   const {mutate, isPending} = mutation
+
   const onSubmit = async (data: LoginForm) => {
       mutate(data)
       
@@ -30,7 +31,6 @@ export const Login = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <CustomInput label={"Email"} type={"email"} name={"email"} control={control} error={errors.email} />
         <CustomInput label={"Password"} type={"password"} name={"password"} control={control} error={errors.password} />
-  
         <button type="submit" disabled ={isPending}>
           {isPending?"Ingresando...":"Ingresar"}
         </button>
