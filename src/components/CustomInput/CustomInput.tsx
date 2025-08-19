@@ -22,7 +22,7 @@ export const CustomInput = <T extends FieldValues>({ control, error, label, name
             name={name}
             control={control}
             render={({ field }) => (
-              <input {...field} type={type} id={name} className={`form-control ${error ? 'is-invalid' : ''}`} />
+              <input {...field} type={type} id={name} className={`input ${error ? 'input input-secondary' : ''}`} />
             )}
           />
           {error && <span style={{ color: 'red' }}>{error.message}</span>}

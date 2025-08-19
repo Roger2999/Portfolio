@@ -1,13 +1,12 @@
 
 
-
-export const Skills = () => {
+export const About = () => {
   return (
   <div className="flex justify-center items-center min-h-full bg-base-100">
       <div className="card w-96 bg-base-200 shadow-xl">
         <div className="card-body">
-          <h2 className="card-title">Skills</h2>
-          <p>Aquí puedes mostrar tus habilidades usando DaisyUI.</p>
+          <h2 className="card-title">Sobre mi</h2>
+          <p>Sobre mi</p>
         </div>
       </div>
     </div>

@@ -25,7 +25,7 @@ export const Register = () => {
         <CustomInput control={control} error={errors.email} label={"Email"} name={"email"} type={"email"} />
         <CustomInput control={control} error={errors.password} label={"Password"} name={"password"} type={"password"} />
         <CustomInput control={control} error={errors.confirmPassword} label={"Confirm Password"} name={"confirmPassword"} type={"password"} />
-        <button type="submit" disabled={isPending}>{isPending ? "Registrando" : "Registrar"}</button>
+  <button type="submit" disabled={isPending} className="btn btn-primary">{isPending ? "Registrando" : "Registrar"}</button>
         {isError && <div style={{ color: 'red', marginTop: 8 }}>Error: {error?.message}</div>}
       </form>
     </>

@@ -3,7 +3,7 @@ import { create } from "zustand";
 // 1. Definir tipos específicos para el tema
 type Theme = "light" | "dark";
 
-interface ThemeState {
+export interface ThemeState {
   theme: Theme | null;
   toggleTheme: () => void; //función que no retorna valor
 }

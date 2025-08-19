@@ -1,5 +1,7 @@
 import type { ReactNode } from "react"
 import { Navigate, Route, Routes } from "react-router-dom"
+import { PageNotFoundComponent } from "../../components"
+
 
  interface Props {
     children: ReactNode
@@ -9,8 +11,8 @@ export const PageNotFound = ({children}:Props) => {
     <Routes>
       {children}
       <Route path="*" element={<Navigate to={"/404"} />}/>
-      <Route path="/404" element={<h3>Pagina no encontrada</h3>}/>
+      <Route path="/404" element={<PageNotFoundComponent/>}/>
     </Routes>
     
   )
-}
+} 
