@@ -18,13 +18,11 @@ export const Login = () => {
   const logout = AuthStore((state)=> state.logout)
   const isAutenticated = AuthStore((state)=>state.isAutenticated)
   const {mutation } = useAuth()
-  const {mutate, isPending} = mutation
+  const {mutate, isPending,isError,error} = mutation
 
 
   const onSubmit = async (data: LoginForm) => {
       mutate(data)
-      
-    
   };
 
   return (
@@ -35,15 +33,18 @@ export const Login = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
         <CustomInput label={"Email"} type={"email"} name={"email"} control={control} error={errors.email} />
         <CustomInput label={"Password"} type={"password"} name={"password"} control={control} error={errors.password} />
-        <button type="submit" disabled ={isPending} className="btn btn-primary">
+        <button type="submit" disabled ={isPending} className="btn btn-soft btn-primary mt-4">
           {isPending?"Ingresando...":"Ingresar"}
         </button>
         {isAutenticated&&(
-          <button type="button" onClick={logout} className="btn btn-outline btn-error ml-4">
+          <button type="button" onClick={logout} className="btn btn-soft btn-primary btn-error mt-4 ml-6">
             Logout
           </button>
         )}
-        
+        <div className="error-login mt-4">
+          {isError && (<span className="text-red-400">{error?.message}</span>)}
+        </div>
+
       </form>
         </div>
       </div>

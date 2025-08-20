@@ -11,7 +11,7 @@ export const useRegister = () => {
     mutationFn: registerService,
     onSuccess: (data, variables) => {
       navigate("/home");
-      register(data.token, variables.email);
+      register(variables.email, data.token);
     },
     onError: (err) => {
       alert("Error en el registro: " + (err?.message || "Intenta nuevamente"));

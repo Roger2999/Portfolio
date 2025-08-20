@@ -14,18 +14,19 @@ interface Props<T extends FieldValues> {
 export const CustomInput = <T extends FieldValues>({ control, error, label, name, type }: Props<T>) => {
   return (
    <>
-   <div className="input-container">
-
-
+   <div className="input-container h-22">
     <label htmlFor={name}>{label}</label>
           <Controller
-            name={name}
+            name={name}   
             control={control}
             render={({ field }) => (
               <input {...field} type={type} id={name} className={`input ${error ? 'input input-secondary' : ''}`} />
             )}
           />
-          {error && <span style={{ color: 'red' }}>{error.message}</span>}
+          
+          <div className="error text-red-400">
+          {error && <span>{error.message}</span>}
+          </div>
    </div>
    </>
   )

@@ -3,3 +3,4 @@ export * from "./CustomInput/CustomInput";
 export * from "./PageNotFound/PageNotFound";
 export * from "./PageNotFoundComponent/PageNotFoundComponent";
 export * from "./Header/Header";
+export * from "./Footer/Footer";

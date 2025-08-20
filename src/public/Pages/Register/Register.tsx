@@ -11,8 +11,8 @@ export const Register = () => {
             email:"",
             password:"",
             confirmPassword:""
-
-        }
+        },
+        mode:"onBlur"
     })
     const mutation = useRegister();
     const { mutate, isPending, isError, error } = mutation;
@@ -21,13 +21,20 @@ export const Register = () => {
     } 
   return (
     <>
+     <div className="flex justify-center items-center min-h-full bg-base-100">
+      <div className="card w-96 bg-base-200 shadow-xl">
+        <div className="card-body w-full">
+          <h2 className="card-title">Registrarse</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <CustomInput control={control} error={errors.email} label={"Email"} name={"email"} type={"email"} />
         <CustomInput control={control} error={errors.password} label={"Password"} name={"password"} type={"password"} />
         <CustomInput control={control} error={errors.confirmPassword} label={"Confirm Password"} name={"confirmPassword"} type={"password"} />
-  <button type="submit" disabled={isPending} className="btn btn-primary">{isPending ? "Registrando" : "Registrar"}</button>
-        {isError && <div style={{ color: 'red', marginTop: 8 }}>Error: {error?.message}</div>}
+  <button type="submit" disabled={isPending} className="btn btn-soft btn-primary mt-4">{isPending ? "Registrando" : "Registrar"}</button>
+        {isError && <div className="error text-red-400 mt-4">Error: {error?.message}</div>}
       </form>
+      </div>
+      </div>
+    </div>
     </>
   );
 }

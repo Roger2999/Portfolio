@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import { Header } from "./components"
+import { Footer, Header } from "./components"
 import { BrowserRouter } from "react-router-dom"
 import "./Portfolio.css"
 interface Props {
@@ -9,10 +9,13 @@ interface Props {
 export const Portfolio = ({children}:Props) => {
   return (
     <BrowserRouter>
+    <div className="container">
       <Header/>
       <div data-theme="dark" className="content">
         {children}
       </div>
-    </BrowserRouter>
+        <Footer/>
+    </div>
+      </BrowserRouter>
   )
 }

@@ -13,6 +13,9 @@ export const useAuth = () => {
       Login(data.token, variables.email);
       navigate("/private/dashboard");
     },
+    onError(err) {
+      alert("Error en el login: " + (err?.message || "Intenta nuevamente"));
+    },
   });
 
   return {
