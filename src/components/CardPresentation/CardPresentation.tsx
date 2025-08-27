@@ -1,33 +1,50 @@
-import "./CardPresentation.css"
-export const CardPresentation = () => {
+export const CardPresentation =()=> {
   return (
-    <div className="card-container">
+   
+      <div className="max-w-md w-full mt-10 bg-white dark:bg-gray-200 rounded-2xl shadow-xl p-8 text-center transform transition hover:scale-[1.02]">
+        
+        {/* Foto / Avatar */}
+        <div className="flex justify-center">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Foto de perfil"
+            className="w-28 h-28 rounded-full border-4 border-primary shadow-md"
+          />
+        </div>
 
-    <div className="card-presentacion">
-      <div className="imagen-perfil">
-        <img src="src\assets\avatar.svg" alt="Tu nombre" />
-      </div>
-      <div className="informacion">
-        <h2>Tu nombre</h2>
-        <p>Tu profesión / descripción</p>
-        <p>Tu ubicación</p>
-        <div className="redes-sociales">
-          <a href="tu-linkedin" target="_blank">
-            Linkedin
-            
+        {/* Nombre */}
+        <h1 className="mt-4 text-2xl font-bold text-gray-900">
+          Roger Gutiérrez Martínez
+        </h1>
+
+        {/* Profesión */}
+        <p className="mt-2 text-gray-600">
+          Desarrollador Frontend | React & TypeScript
+        </p>
+
+        {/* Descripción */}
+        <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+          Apasionado por crear experiencias digitales modernas, 
+          con un enfoque en la simplicidad, el rendimiento y la accesibilidad. 🚀
+        </p>
+
+        {/* Botones */}
+        <div className="mt-6 flex justify-center gap-4">
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            className="px-4 py-2 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
+          >
+            LinkedIn
           </a>
-          <a href="tu-github" target="_blank">
-              GitHub
-            
-          </a>
-          <a href="tu-twitter" target="_blank">
-              Twitter
-            
+          <a
+            href="https://github.com"
+            target="_blank"
+            className="px-4 py-2 rounded-lg bg-gray-800 text-white font-medium hover:bg-gray-900 transition"
+          >
+            GitHub
           </a>
         </div>
       </div>
-    </div>
-    </div>
   )
 }
-

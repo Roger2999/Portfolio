@@ -25,7 +25,6 @@ export const PortfolioRoutes = () => {
                 <Route path="/private/*" element={<PrivateRoutes/>}/>
             </Route>
             </PageNotFound>
-        
     </Portfolio>
    </>
   )

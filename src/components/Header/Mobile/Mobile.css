@@ -1,0 +1,10 @@
+.menu-panel {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-panel.open {
+  transform: translateX(0);
+  opacity: 1;
+}

@@ -1,7 +1,7 @@
 import type { ReactNode } from "react"
 import { Footer, Header } from "./components"
 import { BrowserRouter } from "react-router-dom"
-import "./Portfolio.css"
+// ...existing code...
 interface Props {
     children: ReactNode
 }
@@ -9,9 +9,9 @@ interface Props {
 export const Portfolio = ({children}:Props) => {
   return (
     <BrowserRouter>
-    <div className="container">
+    <div data-theme={"light"} className="container">
       <Header/>
-      <div data-theme="dark" className="content">
+      <div  className="content" >
         {children}
       </div>
         <Footer/>

@@ -3,13 +3,12 @@ import { Bars3Icon } from "@heroicons/react/24/outline"
 import type { HeaderProps } from "../types"
 import { NavLink } from "react-router-dom"
 import { AuthStore } from "../../../store"
-
 export const Desktop = ({ onMenuOpen }: Pick<HeaderProps, "onMenuOpen">) => {
   const isAutenticated = AuthStore((state) => state.isAutenticated);
   const logout = AuthStore((state) => state.logout);
   return (
     <>
-    <nav aria-label="Global" className=" flex items-center justify-between p-6 lg:px-8">
+    <nav aria-label="Global" className=" flex items-center justify-between p-6 lg:px-8 bg-gray-300">
         <div className="flex lg:flex-1">
           <NavLink to="/home" className="-m-1.5 p-1.5">
             <span className="sr-only">Portfolio</span>
@@ -30,20 +29,20 @@ export const Desktop = ({ onMenuOpen }: Pick<HeaderProps, "onMenuOpen">) => {
             <Bars3Icon aria-hidden="true" className="h-6 w-6" />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <NavLink to="/home" className="text-sm/6 font-semibold text-gray-900">
+        <PopoverGroup className="nav hidden lg:flex lg:gap-x-12">
+          <NavLink to="/home" className="text-sm/6 font-semibold text-gray-900 hover:bg-gray-400 rounded-lg">
             Home
           </NavLink>
-          <NavLink to="/about" className="text-sm/6 font-semibold text-gray-900">
+          <NavLink to="/about" className="text-sm/6 font-semibold text-gray-900 hover:bg-gray-400 rounded-lg">
             Sobre mi
           </NavLink>
-          <NavLink to="/projects" className="text-sm/6 font-semibold text-gray-900">
+          <NavLink to="/projects" className="text-sm/6 font-semibold text-gray-900 hover:bg-gray-400 rounded-lg">
             Proyectos
           </NavLink>
-          <NavLink to="/skills" className="text-sm/6 font-semibold text-gray-900">
+          <NavLink to="/skills" className="text-sm/6 font-semibold text-gray-900 hover:bg-gray-400 rounded-lg">
             Habilidades
           </NavLink>
-          <NavLink to="/contact" className="text-sm/6 font-semibold text-gray-900">
+          <NavLink to="/contact" className="text-sm/6 font-semibold text-gray-900 hover:bg-gray-400 rounded-lg">
             Contacto
           </NavLink>
         </PopoverGroup>
