@@ -18,7 +18,7 @@ export const Mobile = ({ mobileMenuOpen, onMenuClose }: Pick<HeaderProps, "mobil
       {/* Panel deslizante */}
       <aside
         className={`fixed inset-y-0 right-0 z-50 w-full sm:max-w-sm bg-white p-6 sm:ring-1 sm:ring-gray-900/10 
-        transform transition-transform transition-opacity duration-300 ease-in-out
+        transform transition-transform duration-300 ease-in-out
         ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0 pointer-events-none"}`}
       >
         <div className="flex items-center justify-between">
