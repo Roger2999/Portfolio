@@ -8,6 +8,11 @@ export const Home = () => {
       <p className="mt-4 text-gray-400">Explore my projects and skills below.</p>
 
       <CardPresentation />
+      <CardPresentation />
+      <CardPresentation />
+      <CardPresentation />
+      <CardPresentation />
+
     </>
   )
 }

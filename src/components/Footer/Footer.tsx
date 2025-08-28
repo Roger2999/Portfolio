@@ -2,7 +2,7 @@
 export const Footer = () => {
   return (
   <>
-  <footer className="footer sm:footer-horizontal bg-gray-300 text-black-content items-center p-4 mt-10">
+  <footer className="footer sm:footer-horizontal text-black-content items-center p-4 mt-10 border-t-2 shadow-xl">
   <aside className="grid-flow-col items-center">
     <svg
       width="36"

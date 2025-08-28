@@ -1,8 +1,11 @@
+import { ThemeStore } from "../../store/ThemeStore/ThemeStore";
+
 export const CardPresentation =()=> {
+  const theme = ThemeStore((state) => state.theme);
   return (
-   
-      <div className="max-w-md w-full mt-10 bg-white dark:bg-gray-200 rounded-2xl shadow-xl p-8 text-center transform transition hover:scale-[1.02]">
-        
+
+      <div className={`max-w-md w-full mt-10 ${theme==="light" ? "bg-gray-300": "bg-gray-800"} rounded-2xl shadow-xl p-8 text-center transform transition hover:scale-[1.02]`}>
+
         {/* Foto / Avatar */}
         <div className="flex justify-center">
           <img
@@ -13,17 +16,17 @@ export const CardPresentation =()=> {
         </div>
 
         {/* Nombre */}
-        <h1 className="mt-4 text-2xl font-bold text-gray-900">
+        <h1 className={`mt-4 text-2xl font-bold ${theme==="light" ? "text-gray-900": "text-white"}`}>
           Roger Gutiérrez Martínez
         </h1>
 
         {/* Profesión */}
-        <p className="mt-2 text-gray-600">
+        <p className={`mt-2 ${theme==="light" ? "text-gray-600": "text-gray-400"}`}>
           Desarrollador Frontend | React & TypeScript
         </p>
 
         {/* Descripción */}
-        <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+        <p className={`mt-4 text-sm leading-relaxed ${theme==="light" ? "text-gray-600": "text-gray-400"}`}>
           Apasionado por crear experiencias digitales modernas, 
           con un enfoque en la simplicidad, el rendimiento y la accesibilidad. 🚀
         </p>
