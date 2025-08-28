@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 // 1. Definir tipos específicos para el tema
-type Theme = "light" | "dark";
+type Theme = "light" | "dark" | "forest";
 
 export interface ThemeState {
   theme: Theme | null;

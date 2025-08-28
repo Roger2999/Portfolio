@@ -37,7 +37,7 @@ export const Login = () => {
           {isPending?"Ingresando...":"Ingresar"}
         </button>
         {isAutenticated&&(
-          <button type="button" onClick={logout} className="btn btn-soft btn-primary btn-error mt-4 ml-6">
+          <button type="button" onClick={logout} className="btn btn-soft btn-error mt-4 ml-6">
             Logout
           </button>
         )}
