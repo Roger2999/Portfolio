@@ -6,7 +6,7 @@ export const CardPresentation =()=> {
         {/* Foto / Avatar */}
         <div className="flex justify-center">
           <img
-            src="https://via.placeholder.com/150"
+            src="src\assets\perfil.png"
             alt="Foto de perfil"
             className="w-28 h-28 rounded-full border-4 border-primary shadow-md"
           />
